@@ -1,0 +1,10 @@
+<project name="Plugin" basedir="." default="Build" description="WordPress plugin">
+    <target name="Build" depends="Unit Tests">
+        <echo>Building everything...</echo>
+    </target>
+
+    <target name="Unit Tests">
+        <echo>Running Unit Tests</echo>
+        <exec command="phpunit" dir="."  passthru="true" />
+    </target>
+</project>
