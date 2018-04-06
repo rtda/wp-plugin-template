@@ -36,11 +36,11 @@ let's keep it simple so far.
 Neither the root directory nor *tests* folder inside of it contain anything
 you are supposed to upload into your */wp-contents/plugins* directory. Only
 *src* folder's contents does contain the files of your plugin. You are free to
-create move your source files into a subfolder (e.g. */src/my-cool-plugin*).
-All you need to do in this case is to make minor change to the */bootstrap.php*
-file: change the $dir variable to the value of `'src/my-cool-plugin'`. This
-makes it easy to continue running unit tests and deploy your plugin by copying
-the whole directory as it is.
+move your source files into a subfolder (e.g. */src/my-cool-plugin*). All you
+need to do in this case is to make minor change to the */bootstrap.php* file:
+change the $dir variable to the value of `'src/my-cool-plugin'`. This makes it
+easy to continue running unit tests and deploy your plugin by copying the
+whole directory as it is.
 
 Automatic deployment could be set in your IDE (e.g. PhpStorm works perfectly)
 or you can use PHing task for this.
@@ -55,7 +55,9 @@ same folder structure and the same namespaces as it is in the */src* directory.
 - Make sure if PHing is installed as well (if you plan using automated build
 tasks);
 - Learn the WordPress coding standards (e.g. class name *Payment_Scheduler*
-should be given a name of *class-payment-scheduler.php*);
+should be given a name of *class-payment-scheduler.php*. Its corresponding
+test case class should be named *Payment_Scheduler_Test* and saved in
+*class-payment-scheduler-test.php* file);
 - Learn and follow the rules of PSR-*;
 - Remove ExampleNamespace directory from both *src* and *tests* directories
 when ready;
